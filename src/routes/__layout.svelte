@@ -1,9 +1,17 @@
 <script>
     import "virtual:windi.css"
-    // if you want to enable windi devtools
+    import { page } from "$app/stores";
     import { browser } from "$app/env";
     if (browser) import("virtual:windi-devtools")
+
+    const pageName = $page.path.slice(1) || 'home'
 </script>
+
+<svelte:head>
+    <title>melike2d &bull; {pageName}</title>
+    <meta name="og:title" content="melike2d &bull; {pageName}" >
+    <meta name="theme-color" content="#0a75cd" >
+</svelte:head>
 
 <main>
     <slot />

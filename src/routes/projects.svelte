@@ -67,7 +67,6 @@
 </script>
 
 <svelte:head>
-    <title>melike2d &bull; projects</title>
     <meta name="og:description" content={desc}>
     <meta name="description" content={desc}>
 </svelte:head>
