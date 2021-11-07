@@ -18,7 +18,7 @@
         {
             title: "Mixtape",
             desc: "A feature-rich music bot that's written in Kotlin proving high-quality music to over **1,000** discord servers ",
-            href: "/mixtape",
+            href: "https://mixtape.systems/",
             theme: "#f794e0", // "#B963A5"
             links: [
                 { icon: faDiscord, href: "https://discord.gg/Vkbmb8kuH4" },
