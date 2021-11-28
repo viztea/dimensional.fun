@@ -17,7 +17,7 @@
     const projects: Project[] = [
         {
             title: "Mixtape",
-            desc: "A feature-rich music bot that's written in Kotlin proving high-quality music to over **1,000** discord servers ",
+            desc: "A feature-rich music bot written in Kotlin providing high-quality music to over **2,150** discord servers ",
             href: "https://mixtape.systems/",
             theme: "#f794e0", // "#B963A5"
             links: [
@@ -26,7 +26,7 @@
                 { icon: faTwitter, href: "https://twitter.com/MixtapeDiscord" },
                 { icon: faGuilded, href: "https://www.guilded.gg/i/Vkby6R72" }
             ],
-            technologies: [ "kotlin", "mongodb", "redis" ]
+            technologies: [ "kotlin", "mongodb", "redis", "rust" ]
         },
         {
             title: "KeiryoJS",
