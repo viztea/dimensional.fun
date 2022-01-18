@@ -17,7 +17,7 @@
     const projects: Project[] = [
         {
             title: "Mixtape",
-            desc: "A feature-rich music bot written in Kotlin providing high-quality music to over **2,150** discord servers ",
+            desc: "A feature-rich music bot written in Kotlin providing high-quality music to over **2,850** discord servers ",
             href: "https://mixtape.systems/",
             theme: "#f794e0", // "#B963A5"
             links: [
@@ -26,7 +26,7 @@
                 { icon: faTwitter, href: "https://twitter.com/MixtapeDiscord" },
                 { icon: faGuilded, href: "https://www.guilded.gg/i/Vkby6R72" }
             ],
-            technologies: [ "kotlin", "mongodb", "redis", "rust" ]
+            technologies: [ "kotlin", "mongodb", "redis", "rust", "rabbitmq" ]
         },
         {
             title: "KeiryoJS",
@@ -39,17 +39,17 @@
             ],
             technologies: [ "typescript", "websockets" ]
         },
-        {
-            title: "KyeKillerBot",
-            desc: "A **free** multi-purpose discord bot that's designed to be easy-to-use while still being quick and powerful.",
-            href: "https://kyekillerbot.xyz",
-            theme: "#ce5eff", // "#795BA2",
-            links: [
-                { icon: faDiscord, href: "https://discord.gg/aNAqxz97bm" },
-                { icon: faGithub, href: "https://github.com/KyeKillerBot" },
-            ],
-            technologies: [ "typescript", "discord.js", "postgresql", "lavaclient" ]
-        },
+//         {
+//             title: "KyeKillerBot",
+//             desc: "A **free** multi-purpose discord bot that's designed to be easy-to-use while still being quick and powerful.",
+//             href: "https://kyekillerbot.xyz",
+//             theme: "#ce5eff", // "#795BA2",
+//             links: [
+//                 { icon: faDiscord, href: "https://discord.gg/aNAqxz97bm" },
+//                 { icon: faGithub, href: "https://github.com/KyeKillerBot" },
+//             ],
+//             technologies: [ "typescript", "discord.js", "postgresql", "lavaclient" ]
+//         },
         {
             title: "lavaclient",
             desc: "An easy-to-use, performant, and library independent [lavalink](https://github.com/freyacodes/lavalink) client for node.js v14 or above",
