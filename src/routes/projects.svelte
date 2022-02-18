@@ -3,7 +3,7 @@
     import Fa from "svelte-fa";
     import Nav from "../lib/Nav.svelte";
     import SvelteMarkdown from "svelte-markdown";
-    import { faLink } from "@fortawesome/free-solid-svg-icons";
+    import { faLink, faCubes } from "@fortawesome/free-solid-svg-icons";
 
     interface Project {
         title: string;
@@ -17,16 +17,17 @@
     const projects: Project[] = [
         {
             title: "Mixtape",
-            desc: "A feature-rich music bot written in Kotlin providing high-quality music to over **2,850** discord servers ",
+            desc: "A feature-rich music bot written in Kotlin providing high-quality music to over **3,000** discord servers ",
             href: "https://mixtape.systems/",
             theme: "#f794e0", // "#B963A5"
             links: [
-                { icon: faDiscord, href: "https://discord.gg/TUYc4nn" },
+                { icon: faDiscord, href: "https://mixtape.systems/discord" },
                 { icon: faGithub, href: "https://github.com/mixtape-bot" },
                 { icon: faTwitter, href: "https://twitter.com/MixtapeDiscord" },
-                { icon: faGuilded, href: "https://www.guilded.gg/i/Vkby6R72" }
+                { icon: faGuilded, href: "https://www.guilded.gg/i/Vkby6R72" },
+                { icon: faCubes, href: "http://mixtape.systems/our-stack" }
             ],
-            technologies: [ "kotlin", "mongodb", "redis", "rust", "rabbitmq" ]
+            technologies: [ "kotlin", "golang", "rust", "rabbitmq", "microservices" ]
         },
         {
             title: "KeiryoJS",
