@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    background-image: url("/bg.jpg");
+
+    @apply w-screen bg-gray-200 text-gray-100 overflow-x-hidden;
+}

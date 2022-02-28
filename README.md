@@ -1,7 +1,9 @@
 # dimensional.fun
 
-> my site that's made with [sveltekit](https://kit.svelte.dev), [windicss](https://windicss.org), and [vercel](https://vercel.com)
+> my site that is made using [next.js](https://nextjs.org), [tailwindcss](https://tailwindcss.com), and [vercel](https://vercel.com)
+
+the code is super bad because yeah
 
 ---
-
-don't copy it
+ 
+don't copy it pls

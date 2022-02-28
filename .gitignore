@@ -1,6 +1,8 @@
-.DS_Store
-node_modules
-/build
-/.svelte-kit
-/package
-/.idea
+.idea/
+.next/
+.yarn/
+
+node_modules/
+
+*.lock
+*.log
