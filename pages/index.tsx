@@ -1,9 +1,18 @@
 import { socials } from 'lib/constants';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function Index() {
+	const desc = '16 y/o high-school junior and full-stack developer from the United States';
+
 	return (
 		<div className="flex h-screen px-10">
+			<Head>
+				<meta
+					name="og:description"
+					content={desc}
+				/>
+			</Head>
 			<div className="block text-center items-center m-auto md:flex md:space-x-2">
 				<div className="relative h-80 md:w-80">
 					<Image
@@ -16,9 +25,7 @@ export default function Index() {
 				</div>
 				<div className="block text-center items-center max-w-sm md:max-w-lg md:text-left">
 					<h1 className="font-bold text-5xl">melike2d</h1>
-					<p className="my-8 prose-sm text-white sm:my-4">
-						16 y/o high-school junior and full-stack developer from the United States
-					</p>
+					<p className="my-8 prose-sm text-white sm:my-4">{desc}</p>
 					<div className="hidden items-center content-center md:flex md:space-x-4">
 						<a
 							title="projects page"

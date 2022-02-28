@@ -1,10 +1,10 @@
 import Navbar from 'components/navbar';
 import Container from 'components/container';
-import React from 'react';
 import { IconType } from 'react-icons';
 import { FaCubes, FaDiscord, FaGithub, FaGuilded, FaLink, FaTwitter } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
 import Footer from 'components/footer';
+import Head from 'next/head';
 
 interface Project {
 	title: string;
@@ -57,6 +57,9 @@ export default function Projects() {
 
 	return (
 		<Container>
+			<Head>
+				<meta name="og:description" content="projects im currently working on or have contributed to." />
+			</Head>
 			<Navbar />
 
 			<div className="flex flex-col">

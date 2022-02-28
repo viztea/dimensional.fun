@@ -47,7 +47,7 @@ export default function Blog(props: BlogProps) {
 					>
 						<div className="relative h-20 w-20 rounded-full shadow-xl border-primary border">
 							<Image
-								src="/logo.png"
+								src="/logo-full.png"
 								alt="logo"
 								layout="fill"
 								objectFit="cover"
