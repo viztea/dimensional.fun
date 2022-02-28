@@ -20,6 +20,7 @@ export default function BlogPost({ meta, children }: PropsWithChildren<BlogPostP
             <Head>
                 <meta name="og:title" content={meta.title} />
                 <meta name="og:description" content={meta.subtitle} />
+                <meta name="description" content={meta.subtitle} />
             </Head>
             <Navbar className="mx-auto" />
 

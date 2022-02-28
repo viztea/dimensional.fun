@@ -55,10 +55,12 @@ export default function Projects() {
 		}
 	];
 
+	const desc = "projects im currently working on or have contributed to."
 	return (
 		<Container>
 			<Head>
-				<meta name="og:description" content="projects im currently working on or have contributed to." />
+				<meta name="og:description" content={desc} />
+				<meta name="description" content={desc} />
 			</Head>
 			<Navbar />
 

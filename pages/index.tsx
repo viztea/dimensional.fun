@@ -8,10 +8,8 @@ export default function Index() {
 	return (
 		<div className="flex h-screen px-10">
 			<Head>
-				<meta
-					name="og:description"
-					content={desc}
-				/>
+				<meta name="og:description" content={desc} />
+				<meta name="description" content={desc} />
 			</Head>
 			<div className="block text-center items-center m-auto md:flex md:space-x-2">
 				<div className="relative h-80 md:w-80">

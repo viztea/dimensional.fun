@@ -31,10 +31,12 @@ export default function Blog(props: BlogProps) {
 
 	useEffect(() => void getPosts(), [ ])
 	
+	const desc = "My blog because why not?";
 	return (
 		<Container className="space-y-6">
 			<Head>
-				<meta name="og:title" content="My blog because why not?" />
+				<meta name="og:description" content={desc} />
+				<meta name="description" content={desc} />
 			</Head>
 
 			<Navbar />
