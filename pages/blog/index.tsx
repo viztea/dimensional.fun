@@ -1,6 +1,7 @@
 import Container from 'components/container';
 import Navbar from 'components/navbar';
 import Image from 'next/image';
+import Head from 'next/head';
 import {join} from 'path';
 import fs from 'fs';
 import React, { useState, useEffect } from 'react';
@@ -32,6 +33,10 @@ export default function Blog(props: BlogProps) {
 	
 	return (
 		<Container className="space-y-6">
+			<Head>
+				<meta name="og:title" content="My blog because why not?" />
+			</Head>
+
 			<Navbar />
 
 			<div className="flex flex-col-reverse">
