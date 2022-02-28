@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 			}}
 		>
 			<Head>
-				<meta name="og:title" content="melike2d &bull; {pageName}" />
+				<meta name="og:title" content={`melike2d &bull; ${pageName}`} />
 	    		<meta name="theme-color" content="#0a75cd" />
 				<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
