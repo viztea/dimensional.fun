@@ -59,6 +59,7 @@ export default function Projects() {
 	return (
 		<Container>
 			<Head>
+				<meta name="og:title" content="melike2d &bull; projects" />
 				<meta name="og:description" content={desc} />
 				<meta name="description" content={desc} />
 			</Head>

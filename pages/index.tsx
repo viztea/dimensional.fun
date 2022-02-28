@@ -8,6 +8,7 @@ export default function Index() {
 	return (
 		<div className="flex h-screen px-10">
 			<Head>
+				<meta name="og:title" content="melike2d &bull; full-stack developer" />
 				<meta name="og:description" content={desc} />
 				<meta name="description" content={desc} />
 			</Head>

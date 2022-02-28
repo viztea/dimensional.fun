@@ -18,7 +18,7 @@ export default function BlogPost({ meta, children }: PropsWithChildren<BlogPostP
 	return (
         <Container>
             <Head>
-                <meta name="og:title" content={meta.title} />
+                <meta name="og:title" content={`melike2d &bull; ${meta.title}`} />
                 <meta name="og:description" content={meta.subtitle} />
                 <meta name="description" content={meta.subtitle} />
             </Head>
