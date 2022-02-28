@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app';
 import { IconContext } from 'react-icons/lib';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
