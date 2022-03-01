@@ -3,8 +3,6 @@ import '../styles/prism-theme.css';
 import type { AppProps } from 'next/app';
 import { IconContext } from 'react-icons/lib';
 import Head from 'next/head';
-import Alert from 'components/alert';
-import Button from 'components/button';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -31,9 +29,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 				<meta name="msapplication-TileColor" content="#2d89ef" />
 				<title>melike2d</title>
 			</Head>
-			<Alert>
-				<Button href="/discord" link>join our discord!</Button>
-			</Alert>
 			<Component {...pageProps} />
 		</IconContext.Provider>
 	);
