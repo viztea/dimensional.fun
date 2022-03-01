@@ -1,16 +1,14 @@
-import Navbar from 'components/navbar';
-import Container from 'components/container';
+import Card, { CardBody, CardFooter, CardHeader, CardTitle } from 'components/card';
 import { IconType } from 'react-icons';
 import { FaCubes, FaDiscord, FaGithub, FaGuilded, FaLink, FaTwitter } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
-import Footer from 'components/footer';
-import Head from 'next/head';
+import Layout from 'ui/layout';
 
 interface Project {
-	title: string;
-	desc: string;
-	href: string;
-	theme: string;
+	name: string;
+	summary: string;
+	home: string;
+	color: string;
 	links: { Icon: IconType; href: string }[];
 	technologies?: string[];
 }
@@ -18,10 +16,10 @@ interface Project {
 export default function Projects() {
 	const projects: Project[] = [
 		{
-			title: 'Mixtape',
-			desc: 'A feature-rich music bot written in Kotlin serving high-quality music to over **3,300** discord servers.',
-			href: 'https://mixtape.systems/',
-			theme: "#B963A5" /*'#F794E0'*/,
+			name: 'Mixtape',
+			summary: 'A feature-rich music bot written in Kotlin serving high-quality music to over **3,300** discord servers.',
+			home: 'https://mixtape.systems/',
+			color: '#F794E0' /* '#B963A5' */,
 			links: [
 				{ Icon: FaDiscord, href: 'https://mixtape.systems/discord' },
 				{ Icon: FaGithub, href: 'https://github.com/mixtape-bot' },
@@ -32,10 +30,10 @@ export default function Projects() {
 			technologies: ['kotlin', 'golang', 'rust', 'rabbitmq', 'microservices']
 		},
 		{
-			title: 'KeiryoJS',
-			desc: 'A fast distributed nodejs library for interacting with the discord gateway and api.',
-			href: 'https://github.com/KeiryoJS',
-			theme: "#795BA2" /* '#AE8CDE' */,
+			name: 'KeiryoJS',
+			summary: 'A fast distributed nodejs library for interacting with the discord gateway and api.',
+			home: 'https://github.com/KeiryoJS',
+			color: '#AE8CDE' /* '#795BA2' */,
 			links: [
 				{ Icon: FaDiscord, href: 'https://discord.gg/Vkbmb8kuH4' },
 				{ Icon: FaGithub, href: 'https://github.com/KeiryoJS' }
@@ -43,10 +41,10 @@ export default function Projects() {
 			technologies: ['typescript', 'websockets']
 		},
 		{
-			title: 'lavaclient',
-			desc: 'An easy-to-use, performant, and library independent [lavalink](https://github.com/freyacodes/lavalink) client for node.js v14 or above',
-			href: 'https://lavaclient.js.org',
-			theme: '#1c1c1c' /* "#795BA2" */,
+			name: 'lavaclient',
+			summary: 'An easy-to-use, performant, and library independent [lavalink](https://github.com/freyacodes/lavalink) client for node.js v14 or above',
+			home: 'https://lavaclient.js.org',
+			color: '#fff' /* "#795BA2" */,
 			links: [
 				{ Icon: FaDiscord, href: 'https://discord.gg/CH9ubGPMV6' },
 				{ Icon: FaGithub, href: 'https://github.com/lavaclient' }
@@ -55,55 +53,42 @@ export default function Projects() {
 		}
 	];
 
-	const desc = "projects im currently working on or have contributed to."
 	return (
-		<Container>
-			<Head>
-				<meta name="og:title" content="melike2d &bull; projects" />
-				<meta name="og:description" content={desc} />
-				<meta name="description" content={desc} />
-			</Head>
-			<Navbar />
-
+		<Layout
+			title="melike2d &bull; projects"
+			description="projects im currently working on or have contributed to."
+		>
 			<div className="flex flex-col">
 				{projects.map((project, i) => (
-					<div
-						key={i}
-						className="block max-w-lg bg-gray-300 text-gray-900 border-2 border-gray-100 border-solid rounded-xl mb-6 last:mb-0 shadow-xl"
-					>
-						<div className="flex px-4 py-2 mb-4 bg-gray-100 border-primary-dark border-b-1 justify-between items-center rounded-t-lg">
-							<h1 className={'font-bold text-lg'} style={{ color: project.theme }}>
-								{project.title}
-							</h1>
+					<Card className=' max-w-lg'>
+						<CardHeader>
+							<CardTitle style={{ color: project.color }}>{project.name}</CardTitle>
 							<div className="flex space-x-4">
 								{project.links.map(({ Icon, href }, i) => (
 									<a key={i} href={href} target="_blank">
-										<Icon className="shadow-xl" color={project.theme} />
+										<Icon className="shadow-xl" color={project.color} />
 									</a>
 								))}
 
-								<a title="home page" href={project.href}>
-									<FaLink color={project.theme} />
+								<a title="home page" href={project.home}>
+									<FaLink color={project.color} />
 								</a>
 							</div>
-						</div>
-
-						<p className="px-4 pb-4 prose text-gray-900">
-							<ReactMarkdown children={project.desc} />
+						</CardHeader>
+						<CardBody className="prose prose-invert">
+							<ReactMarkdown children={project.summary} />
 
 							{project.technologies?.length && (
-								<div className="flex pt-2 space-x-3 text-gray-700 text-xs">
+								<CardFooter className='space-x-2'>
 									{project.technologies.map((t, i) => (
 										<span key={i}>{t}</span>
 									))}
-								</div>
+								</CardFooter>
 							)}
-						</p>
-					</div>
+						</CardBody>
+					</Card>
 				))}
 			</div>
-
-			<Footer />
-		</Container>
+		</Layout>
 	);
 }

@@ -1,38 +1,31 @@
-import { socials } from 'lib/constants';
-import Image from 'next/image';
-import Head from 'next/head';
+import { routes, socials } from 'lib/constants';
+import Logo from 'components/logo';
+import SEO from 'components/seo';
 
 export default function Index() {
-	const desc = '16 y/o high-school junior and full-stack developer from the United States';
-
 	return (
 		<div className="flex h-screen px-10">
-			<Head>
-				<meta name="og:title" content="melike2d &bull; full-stack developer" />
-				<meta name="og:description" content={desc} />
-				<meta name="description" content={desc} />
-			</Head>
+			<SEO />
 			<div className="block text-center items-center m-auto md:flex md:space-x-2">
-				<div className="relative h-80 md:w-80">
-					<Image
-						src="/logo-text.png"
-						className="inline-block"
-						layout="fill"
-						objectFit="cover"
-						alt="text logo"
-					/>
-				</div>
+				<Logo />
 				<div className="block text-center items-center max-w-sm md:max-w-lg md:text-left">
 					<h1 className="font-bold text-5xl">melike2d</h1>
-					<p className="my-8 prose-sm text-white sm:my-4">{desc}</p>
+					<p className="my-8 prose-sm text-white sm:my-4">
+						16 y/o high-school junior and full-stack developer from the United States
+					</p>
 					<div className="hidden items-center content-center md:flex md:space-x-4">
-						<a
-							title="projects page"
-							href="/projects"
-							className="text-primary-light px-3 py-2 transition-all ml-[-.8rem] rounded-lg hover:bg-opacity-25 hover:bg-gray-800"
-						>
-							projects
-						</a>
+						<div className="flex items-center md:space-x-2">
+							{routes.slice(1).map((route, i) => (
+								<a
+									title={route.name}
+									href={route.href}
+									className="text-primary-light px-3 py-2 transition-all ml-[-.8rem] rounded-lg hover:bg-opacity-25 hover:bg-gray-800"
+									key={i}
+								>
+									{route.name}
+								</a>
+							))}
+						</div>
 						<div className="hidden items-center md:flex md:grid-row-1 md:gap-y-0 md:gap-x-4">
 							{socials.map(({ Icon, ...social }, i) => (
 								<a

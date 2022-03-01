@@ -1,18 +1,18 @@
-/** @type {import('next').NextConfig} */
-// module.exports = {
-//     reactStrictMode: true,
-// }
+const { withContentlayer } = require('next-contentlayer');
 
-const withMDX = require('@next/mdx')({
-	extension: /\.mdx?$/,
-	options: {
-		remarkPlugins: [require("remark-prism")],
-		rehypePlugins: [],
-		// If you use `MDXProvider`, uncomment the following line.
-		providerImportSource: "@mdx-js/react",
+module.exports = withContentlayer()({
+	swcMinify: true,
+	reactStrictMode: true,
+	webpack: (config, { dev, isServer }) => {
+		if (!dev && !isServer) {
+			Object.assign(config.resolve.alias, {
+				'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+				react: 'preact/compat',
+				'react-dom/test-utils': 'preact/test-utils',
+				'react-dom': 'preact/compat'
+			});
+		}
+
+		return config;
 	}
-});
-module.exports = withMDX({
-	// Append the default value with md extensions
-	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 });

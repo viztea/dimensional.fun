@@ -1,5 +1,5 @@
 module.exports = {
-  content: [ "./pages/**/*.tsx", "./components/**/*.tsx" ],
+  content: [ "./pages/**/*.tsx", "./ui/**/*.tsx", "./components/**/*.tsx" ],
   theme: {
     extend: {
       colors: {
@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms")
   ]
 }
