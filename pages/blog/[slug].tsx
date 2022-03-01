@@ -4,6 +4,7 @@ import { allBlogs } from '.contentlayer/data';
 import type { Blog } from '.contentlayer/types';
 import Layout from 'ui/layout';
 import Head from 'next/head';
+import Header from 'components/header';
 
 export async function getStaticPaths() {
 	return {
@@ -32,15 +33,8 @@ export default function BlogPost({ post }: { post: Blog }) {
 
 	return (
 		<Layout title={post.title} description={post.subtitle}>
-			<Head>
-				<meta name="og:title" content={`melike2d &bull; ${post.title}`} />
-				<meta name="og:description" content={post.subtitle} />
-				<meta name="description" content={post.subtitle} />
-			</Head>
 			<div className="space-y-6 ">
-				<div className="space-y">
-					<h1 className="text-4xl font-bold">{post.title}</h1>
-				</div>
+				<Header title={post.title} />
 
 				<div className="max-w-lg prose prose-invert prose-headings:mt-2 prose-hr:my-10">
 					<Component components={{ code }} />

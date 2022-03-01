@@ -1,17 +1,23 @@
 import { PropsWithChildren } from 'react';
-import Container from 'components/container';
+import Container, { ContainerProps } from 'components/container';
 import Footer from 'ui/footer';
 import Navbar from 'ui/navbar';
 import SEO, { SEOProps } from '../components/seo';
 
-export default function Layout({ children, ...props }: PropsWithChildren<SEOProps>) {
+type LayoutProps = {
+	footer?: boolean;
+	navbar?: boolean;
+	centered?: boolean;
+} & ContainerProps
+
+export default function Layout({ children, footer = true, navbar = true, ...props }: PropsWithChildren<LayoutProps & SEOProps>) {
 	return (
 		<>
 			<SEO {...props} />
-			<Container>
-				<Navbar />
+			<Container {...props}>
+				{navbar && <Navbar />}
 				{children}
-				<Footer />
+				{footer && <Footer />}
 			</Container>
 		</>
 	);

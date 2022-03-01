@@ -60,7 +60,7 @@ export default function Projects() {
 		>
 			<div className="flex flex-col">
 				{projects.map((project, i) => (
-					<Card className=' max-w-lg'>
+					<Card className='max-w-lg' key={i}>
 						<CardHeader>
 							<CardTitle style={{ color: project.color }}>{project.name}</CardTitle>
 							<div className="flex space-x-4">
