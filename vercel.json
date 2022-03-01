@@ -1,0 +1,18 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "cleanUrls": true,
+    "redirects": [
+        {
+            "source": "/blog",
+            "destination": "/feed"
+        },
+        {
+            "source": "/discord",
+            "destination": "https://discord.gg/JrHfSmb"
+        },
+        {
+            "source": "/github",
+            "destination": "https://github.com/melike2d"
+        }
+    ]
+}
