@@ -6,8 +6,8 @@ export type ButtonType = 'default';
 export type ButtonStyle = 'default' | 'primary';
 
 const styles: Record<ButtonStyle, string> = {
-	default: 'text-gray-200 hover:bg-opacity-25 hover:bg-gray-800',
-	primary: 'text-primary-light hover:bg-opacity-25 hover:bg-gray-800'
+	default: 'text-gray-200 hover:bg-opacity-25 hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-800',
+	primary: 'text-primary-light hover:bg-opacity-25 hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-800'
 };
 
 export default function Button({
@@ -20,9 +20,9 @@ export default function Button({
 }: PropsWithChildren<ButtonProps>) {
 	const classes = concat(
 		'flex items-center transition px-3 py-2 rounded-lg',
+		link ? 'select-none cursor-pointer' : '',
 		styles[style],
 		className,
-		link ? 'select-none cursor-pointer' : ''
 	);
 
 	return link ? (

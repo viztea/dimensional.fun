@@ -23,12 +23,13 @@ export function NavLink({
 	...props
 }: PropsWithClassName<Route & { style?: ButtonStyle; includeIcon?: boolean }>) {
 	const router = useRouter();
+	const icon = includeIcon && Icon;
 
 	return (
 		<Link href={href} passHref>
-			<Button className={concat(router.pathname === href ? 'font-bold' : '', className)} {...props} link>
-				{includeIcon && Icon && <Icon className="mr-3" />}
-				{name}
+			<Button className={concat(router.pathname === href ? 'font-bold' : '', icon ? 'space-x-1.5' : '', className)} {...props} link>
+				{icon && <Icon />}
+				<span>{name}</span>
 			</Button>
 		</Link>
 	);

@@ -14,11 +14,12 @@ export default function Container({
 	grow
 }: PropsWithChildren<ContainerProps>) {
 	return (
-		<div className={concat('flex px-4 md:p-0', centered ? 'h-screen' : 'h-full')}>
+		<div className={concat('flex md:p-0', centered ? 'h-screen' : 'h-full')}>
 			<div
 				className={concat(
+					"px-4 sm:px-0",
 					centered ? 'm-auto' : 'mx-auto',
-					grow ? '' : 'min-w-[362px] max-w-sm md:min-w-[392px] md:max-w-md',
+					grow ? '' : 'min-w-[362px] max-w-sm sm:min-w-[392px] sm:max-w-md',
 					className ?? ''
 				)}
 			>
