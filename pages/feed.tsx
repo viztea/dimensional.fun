@@ -6,6 +6,10 @@ import { allBlogs } from '.contentlayer/data';
 import { pick } from 'contentlayer/client';
 import { concat } from 'lib/tools/concat';
 import Card, { CardBody, CardFooter, CardHeader, CardTitle } from 'components/card';
+import PostStats from 'components/post-stats';
+import { Blog } from 'lib/types';
+import PostViewCounter from 'components/post-view-counter';
+import PostInformation from 'components/post-information';
 
 export function getStaticProps(): { props: FeedProps } {
 	const posts = allBlogs.map((post) =>
@@ -14,14 +18,6 @@ export function getStaticProps(): { props: FeedProps } {
 
 	return { props: { posts } };
 }
-
-type Blog = {
-	slug: string;
-	title: string;
-	subtitle: string;
-	date: string;
-	readingTime: { text: string; words: string };
-};
 
 type FeedProps = {
 	posts: Blog[];
@@ -63,21 +59,18 @@ export default function Feed({ posts }: FeedProps) {
 	);
 }
 
-function BlogPostCard({ blog }: { blog: Blog }) {
+function BlogPostCard({ blog: post }: { blog: Blog }) {
 	return (
-		<a href={`/blog/${blog.slug}`} className="mb-4">
+		<a href={`/blog/${post.slug}`} className="mb-4">
 			<Card>
 				<CardHeader>
-					<CardTitle>{blog.title}</CardTitle>
+					<CardTitle>{post.title}</CardTitle>
+					<PostViewCounter className='text-xs text-neutral-300' slug={post.slug} isFeed />
 				</CardHeader>
 				<CardBody>
-					{blog.subtitle}
-					<CardFooter>
-						<span>{new Date(blog.date).toDateString()}</span>
-						<span>&mdash;</span>
-						<span>
-							{blog.readingTime.text} &bull; {blog.readingTime.words} words
-						</span>
+					{post.subtitle}
+					<CardFooter className='justify-between'>
+						<PostInformation post={post} />
 					</CardFooter>
 				</CardBody>
 			</Card>

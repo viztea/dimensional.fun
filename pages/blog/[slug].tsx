@@ -1,10 +1,10 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import { allBlogs } from '.contentlayer/data';
 import type { Blog } from '.contentlayer/types';
 import Layout from 'ui/layout';
-import Head from 'next/head';
 import Header from 'components/header';
+import PostStats from 'components/post-stats';
 
 export async function getStaticPaths() {
 	return {
@@ -19,25 +19,19 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	return { props: { post } };
 }
 
-function code({ className, children }: PropsWithChildren<{ className: string }>) {
-	console.log(className);
-	return (
-		<>
-		{children}
-		</>
-	);
-}
-
 export default function BlogPost({ post }: { post: Blog }) {
 	const Component = useMDXComponent(post.body.code);
 
 	return (
 		<Layout title={post.title} description={post.subtitle}>
 			<div className="space-y-6 ">
-				<Header title={post.title} />
+				<div>
+					<Header title={post.title} />
+					<PostStats post={post} />
+				</div>
 
 				<div className="max-w-lg prose prose-invert prose-headings:mt-2 prose-hr:my-10">
-					<Component components={{ code }} />
+					<Component />
 				</div>
 			</div>
 		</Layout>

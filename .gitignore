@@ -10,3 +10,6 @@ node_modules/
 
 # Contentlayer
 .contentlayer
+
+# Environment Variables
+.env
