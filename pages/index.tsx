@@ -1,7 +1,7 @@
 import { routes, socials } from 'lib/constants';
 import Logo from 'components/logo';
-import { NavLink } from 'ui/navbar';
-import Layout from 'ui/layout';
+import NavLink from 'components/ui/nav/link';
+import Layout from 'components/ui/layout';
 import Button from 'components/button';
 import useComponentVisible from 'lib/hooks/useComponentVisible';
 import { concat } from 'lib/tools/concat';

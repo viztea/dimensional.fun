@@ -1,6 +1,6 @@
 import Button from 'components/button';
 import Header from 'components/header';
-import Layout from 'ui/layout';
+import Layout from 'components/ui/layout';
 
 const statuses: Record<number, string> = {
 	404: "Couldn't find that page, even though you should be seeing the actual 404 page but whatever.",
@@ -8,7 +8,6 @@ const statuses: Record<number, string> = {
 };
 
 function Error({ statusCode }) {
-	console.log(statusCode);
 	return (
 		<Layout navbar={false} footer={false} centered>
 			<Header

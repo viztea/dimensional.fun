@@ -2,7 +2,7 @@ import Card, { CardBody, CardFooter, CardHeader, CardTitle } from 'components/ca
 import { IconType } from 'react-icons';
 import { FaCubes, FaDiscord, FaGithub, FaGuilded, FaLink, FaTwitter } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
-import Layout from 'ui/layout';
+import Layout from 'components/ui/layout';
 
 interface Project {
 	name: string;
@@ -57,6 +57,7 @@ export default function Projects() {
 		<Layout
 			title="melike2d &bull; projects"
 			description="projects im currently working on or have contributed to."
+			navbar={{ includeSession: false }}
 		>
 			<div className="flex flex-col">
 				{projects.map((project, i) => (

@@ -12,7 +12,7 @@ const computedFields: ComputedFields = {
         type: 'json',
         resolve: doc => readingTime(doc.body.raw)
     },
-    slug: {
+    id: {
         type: 'string',
         resolve: doc => doc._raw.sourceFileName.slice(0, -4)
     }

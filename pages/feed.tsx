@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import Container from 'components/container';
-import Navbar from 'ui/navbar';
+import Navbar from 'components/ui/nav/bar';
 import SEO from 'components/seo';
 import { allBlogs } from '.contentlayer/data';
 import { pick } from 'contentlayer/client';
 import { concat } from 'lib/tools/concat';
 import Card, { CardBody, CardFooter, CardHeader, CardTitle } from 'components/card';
-import PostStats from 'components/post-stats';
 import { Blog } from 'lib/types';
-import PostViewCounter from 'components/post-view-counter';
-import PostInformation from 'components/post-information';
+import PostViewCounter from 'components/post/views';
+import PostInformation from 'components/post/info';
 
 export function getStaticProps(): { props: FeedProps } {
 	const posts = allBlogs.map((post) =>
-		pick(post, ['slug', 'title', 'subtitle', 'date', 'readingTime'])
+		pick(post, ['id', 'title', 'subtitle', 'date', 'readingTime'])
 	);
 
 	return { props: { posts } };
@@ -61,11 +60,11 @@ export default function Feed({ posts }: FeedProps) {
 
 function BlogPostCard({ blog: post }: { blog: Blog }) {
 	return (
-		<a href={`/blog/${post.slug}`} className="mb-4">
+		<a href={`/blog/${post.id}`} className="mb-4">
 			<Card>
 				<CardHeader>
 					<CardTitle>{post.title}</CardTitle>
-					<PostViewCounter className='text-xs text-neutral-300' slug={post.slug} isFeed />
+					<PostViewCounter className='text-xs text-neutral-300' id={post.id} isFeed />
 				</CardHeader>
 				<CardBody>
 					{post.subtitle}
@@ -76,20 +75,4 @@ function BlogPostCard({ blog: post }: { blog: Blog }) {
 			</Card>
 		</a>
 	);
-	// return (
-	// 	<a
-	// 		href={`/blog/${blog.slug}`}
-	// 		className="bg-black bg-opacity-50 p-4 rounded-lg border border-gray-500 shadow-xl max-w-md mb-4"
-	// 	>
-	// 		<h2 className="font-bold text-2xl">{blog.title}</h2>
-	// 		<h3 className="font-medium text-neutral-200">{blog.subtitle}</h3>
-	// 		<span className="flex text-neutral-300 text-xs mt-2.5 font-medium space-x-1">
-	// 			<span>{new Date(blog.date).toDateString()}</span>
-	// 			<span>&mdash;</span>
-	// 			<span>
-	// 				{blog.readingTime.text} &bull; {blog.readingTime.words} words
-	// 			</span>
-	// 		</span>
-	// 	</a>
-	// );
 }

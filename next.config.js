@@ -3,6 +3,11 @@ const { withContentlayer } = require('next-contentlayer');
 module.exports = withContentlayer()({
 	swcMinify: true,
 	reactStrictMode: true,
+	images: {
+		domains: [
+			"avatars.githubusercontent.com"
+		]
+	},
 	webpack: (config, { dev, isServer }) => {
 		if (!dev && !isServer) {
 			Object.assign(config.resolve.alias, {

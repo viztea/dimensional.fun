@@ -3,8 +3,8 @@ import Header from 'components/header';
 import { routes } from 'lib/constants';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Layout from 'ui/layout';
-import { NavLink } from 'ui/navbar';
+import Layout from 'components/ui/layout';
+import NavLink from 'components/ui/nav/link';
 
 export default function NotFound() {
 	const router = useRouter();
