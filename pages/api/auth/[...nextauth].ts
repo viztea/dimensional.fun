@@ -40,7 +40,7 @@ export default NextAuth({
         },
     },
     session: {
-        strategy: 'jwt',
+        strategy: "jwt"
     },
     pages: {
         newUser: "/users/@me",

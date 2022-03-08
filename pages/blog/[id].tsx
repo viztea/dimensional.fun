@@ -6,7 +6,6 @@ import Layout from 'components/ui/layout';
 import Header from 'components/header';
 import PostInformation from 'components/post/info';
 import PostViewCounter from 'components/post/views';
-import useSWR from 'swr';
 
 export async function getStaticPaths() {
 	return {

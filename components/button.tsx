@@ -28,7 +28,7 @@ export default function Button({
 		className
 	);
 
-	return <div className={classes}>{children}</div>;
+	return <div className={classes} {...props}>{children}</div>;
 }
 
 type ButtonProps = PropsWithClassName<

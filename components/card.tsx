@@ -26,7 +26,7 @@ export function CardTitle({ children, className = "", style = {} }: PropsWithSty
 
 export function CardBody({ children, className = "", style = {} }: PropsWithStyling<PropsWithChildren<{}>>) {
 	return (
-        <p style={style} className={concat("px-4 pb-4 text-neutral-200", className)}>{children}</p>
+        <div style={style} className={concat("px-4 pb-4 text-neutral-200", className)}>{children}</div>
 	);
 }
 
