@@ -2,9 +2,10 @@
   "name": "dimensional.fun",
   "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "yarn db:client && next build",
+    "start": "next start",
+    "start:dev": "next dev",
+    "db:client": "prisma generate"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.4.0",
