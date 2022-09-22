@@ -45,9 +45,9 @@ export default function Index() {
 							</div>
 						</div>
 						<Button
-							className={'px-4 m-6 mx-auto justify-center md:hidden'}
+							className={'px-4 m-6 mx-auto justify-center md:hidden w-full'}
 							onClick={() => setVisible(true)}
-							link
+							component={'button'}
 						>
 							Open Menu
 						</Button>
