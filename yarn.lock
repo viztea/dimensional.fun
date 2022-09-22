@@ -1829,7 +1829,6 @@ __metadata:
     next: ^12.1.0
     next-contentlayer: 0.0.34
     postcss: ^8.4.6
-    preact: ^10.6.6
     prisma: ^4.3.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4581,13 +4580,6 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 60e7808f39c4a9d0fa067bfd5eb906168c4eb6d3ff0093f7d314d1979b001a16363deedccd368a7df869c63ad4ae350d27da439c94ff3fb0f8fc93d49fe38a90
-  languageName: node
-  linkType: hard
-
-"preact@npm:^10.6.6":
-  version: 10.6.6
-  resolution: "preact@npm:10.6.6"
-  checksum: d6a9581b222c60595f987be28738b68dabb3045f72043e2619af81e9ca00b2b0942717642bcfcaab77a0afa50a97cd35039139c7f425a62a4f02ceb793d8ef83
   languageName: node
   linkType: hard
 

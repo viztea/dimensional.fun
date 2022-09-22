@@ -3,7 +3,7 @@ const { withContentlayer } = require('next-contentlayer');
 module.exports = withContentlayer()({
 	swcMinify: true,
 	reactStrictMode: true,
-	webpack: (config, { dev, isServer }) => {
+	/* webpack: (config, { dev, isServer }) => {
 		if (!dev && !isServer) {
 			Object.assign(config.resolve.alias, {
 				'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
@@ -14,5 +14,5 @@ module.exports = withContentlayer()({
 		}
 
 		return config;
-	}
+	} */
 });
