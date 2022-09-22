@@ -3,7 +3,7 @@ import { ApiPost, PropsWithStyling } from "lib/types";
 import { useEffect } from "react";
 import useSWR from "swr";
 
-export default function PostViewCounter({ slug, isFeed = false, ...props }: PropsWithStyling<{ isFeed: boolean, slug: string; }>) {
+export default function PostViewCounter({ slug, isFeed = false, ...props }: PropsWithStyling<{ isFeed?: boolean, slug: string; }>) {
 	const { data } = useSWR<ApiPost>(`/api/posts/${slug}`, fetcher),
 		views = Number(data?.data);
 
