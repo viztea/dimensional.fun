@@ -8,8 +8,8 @@ export type SEOProps = {
 };
 
 export default function SEO({
-	description = '16 y/o high-schooler from California, USA.',
-	title = 'melike2d • full-stack developer.',
+	description = 'a 17 y/o high-school student from Califoria',
+	title = 'melike2d • full-stack developer',
 	type = 'website'
 }: SEOProps) {
     const router = useRouter()
