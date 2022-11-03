@@ -1,5 +1,5 @@
 import { concat } from 'lib/tools/concat';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 type LogoProps = {
 	className?: string;
