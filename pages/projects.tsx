@@ -21,11 +21,11 @@ export default function Projects() {
 			home: 'https://mixtape.systems/',
 			color: '#F794E0' /* '#B963A5' */,
 			links: [
-				{ Icon: FaDiscord, href: 'https://mixtape.systems/discord' },
-				{ Icon: FaGithub, href: 'https://github.com/mixtape-bot' },
+				{ Icon: FaDiscord, href: '/discord' },
+				{ Icon: FaGithub,  href: 'https://github.com/mixtape-bot' },
 				{ Icon: FaTwitter, href: 'https://twitter.com/MixtapeDiscord' },
 				{ Icon: FaGuilded, href: 'https://www.guilded.gg/i/Vkby6R72' },
-				{ Icon: FaCubes, href: 'http://mixtape.systems/our-stack' }
+				{ Icon: FaCubes,   href: 'http://mixtape.systems/our-stack' }
 			],
 			technologies: ['kotlin', 'golang', 'rust', 'rabbitmq', 'microservices']
 		},
@@ -35,8 +35,8 @@ export default function Projects() {
 			home: 'https://github.com/KeiryoJS',
 			color: '#AE8CDE' /* '#795BA2' */,
 			links: [
-				{ Icon: FaDiscord, href: 'https://discord.gg/Vkbmb8kuH4' },
-				{ Icon: FaGithub, href: 'https://github.com/KeiryoJS' }
+				{ Icon: FaDiscord, href: '/discord' },
+				{ Icon: FaGithub,  href: 'https://github.com/KeiryoJS' }
 			],
 			technologies: ['typescript', 'websockets']
 		},
@@ -46,8 +46,8 @@ export default function Projects() {
 			home: 'https://lavaclient.js.org',
 			color: '#fff' /* "#795BA2" */,
 			links: [
-				{ Icon: FaDiscord, href: 'https://discord.gg/CH9ubGPMV6' },
-				{ Icon: FaGithub, href: 'https://github.com/lavaclient' }
+				{ Icon: FaDiscord, href: '/discord' },
+				{ Icon: FaGithub,  href: 'https://github.com/lavaclient' }
 			],
 			technologies: ['typescript', 'websockets']
 		}
