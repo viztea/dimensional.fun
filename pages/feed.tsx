@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Container from 'components/container';
 import Navbar from 'ui/navbar';
 import SEO from 'components/seo';
@@ -6,15 +6,14 @@ import { allBlogs } from '.contentlayer/data';
 import { pick } from 'contentlayer/client';
 import { concat } from 'lib/tools/concat';
 import Card, { CardBody, CardFooter, CardHeader, CardTitle } from 'components/card';
-import PostStats from 'components/post-stats';
 import { Blog } from 'lib/types';
 import PostViewCounter from 'components/post-view-counter';
 import PostInformation from 'components/post-information';
 
 export function getStaticProps(): { props: FeedProps } {
-	const posts = allBlogs.map((post) =>
-		pick(post, ['slug', 'title', 'subtitle', 'date', 'readingTime'])
-	);
+	const posts = allBlogs
+		.map((post) => pick(post, ['slug', 'title', 'subtitle', 'date', 'readingTime']))
+		.sort((b, a) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
 	return { props: { posts } };
 }

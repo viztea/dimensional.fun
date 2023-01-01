@@ -12,7 +12,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
                 create: { slug }
             });
 
-            return res.status(200).json({ success: false, data: post.views });
+            return res.status(200).json({ success: true, data: post.views });
         }
 
         if (req.method === "GET") {
@@ -20,7 +20,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
                 where: { slug },
             });
 
-            return res.status(200).json({ success: false, data: post.views });
+            return res.status(200).json({ success: true, data: post?.views ?? 0 });
         }
     } catch (e) {
         return res.status(500).json({ success: false, data: `${e}` });

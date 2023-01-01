@@ -17,7 +17,7 @@ export default function Index() {
 					<div className="block text-center items-center max-w-sm md:max-w-lg md:text-left">
 						<h1 className="font-bold text-5xl">melike2d</h1>
 						<p className="my-8 prose-sm text-white sm:my-4">
-							17 y/o high-school student and full-stack developer from the California, United States.
+							17 y/o high-school & full-stack developer student from California.
 						</p>
 						<div className="hidden items-center content-center md:flex md:space-x-4">
 							<div className="flex items-center ml-[-0.8rem] md:space-x-1.5">
@@ -45,9 +45,9 @@ export default function Index() {
 							</div>
 						</div>
 						<Button
-							className={'px-4 m-6 mx-auto justify-center md:hidden'}
+							className={'px-4 m-6 mx-auto justify-center md:hidden w-full'}
 							onClick={() => setVisible(true)}
-							link
+							component={'button'}
 						>
 							Open Menu
 						</Button>

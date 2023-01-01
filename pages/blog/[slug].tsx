@@ -5,6 +5,8 @@ import type { Blog } from '.contentlayer/types';
 import Layout from 'ui/layout';
 import Header from 'components/header';
 import PostStats from 'components/post-stats';
+import Giscus from '@giscus/react';
+import PostComments from 'components/post-comments';
 
 export async function getStaticPaths() {
 	return {
@@ -32,6 +34,10 @@ export default function BlogPost({ post }: { post: Blog }) {
 
 				<div className="max-w-lg prose prose-invert prose-headings:mt-2 prose-hr:my-10">
 					<Component />
+				</div>
+
+				<div className="mt-[14px]">
+					<PostComments />
 				</div>
 			</div>
 		</Layout>

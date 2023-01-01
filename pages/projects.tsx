@@ -15,30 +15,45 @@ interface Project {
 
 export default function Projects() {
 	const projects: Project[] = [
+// 		{
+// 			name: 'Mixtape',
+// 			summary: `
+// **Shutdown indefinitely!**
+
+// A feature-rich music bot written in Kotlin serving high-quality music to over **3,300** discord servers.
+// 			`,
+// 			home: 'https://mixtape.systems/',
+// 			color: '#F794E0' /* '#B963A5' */,
+// 			links: [
+// 				{ Icon: FaDiscord, href: '/discord' },
+// 				{ Icon: FaGithub,  href: 'https://github.com/mixtape-bot' },
+// 				{ Icon: FaTwitter, href: 'https://twitter.com/MixtapeDiscord' },
+// 				{ Icon: FaGuilded, href: 'https://www.guilded.gg/i/Vkby6R72' },
+// 				{ Icon: FaCubes,   href: 'http://mixtape.systems/our-stack' }
+// 			],
+// 			technologies: ['kotlin', 'golang', 'rust', 'rabbitmq', 'microservices']
+// 		},
+// 		{
+// 			name: 'KeiryoJS',
+// 			summary: 'A fast distributed nodejs library for interacting with the discord gateway and api.',
+// 			home: 'https://github.com/KeiryoJS',
+// 			color: '#AE8CDE' /* '#795BA2' */,
+// 			links: [
+// 				{ Icon: FaDiscord, href: '/discord' },
+// 				{ Icon: FaGithub,  href: 'https://github.com/KeiryoJS' }
+// 			],
+// 			technologies: ['typescript', 'websockets']
+// 		},
 		{
-			name: 'Mixtape',
-			summary: 'A feature-rich music bot written in Kotlin serving high-quality music to over **3,300** discord servers.',
-			home: 'https://mixtape.systems/',
-			color: '#F794E0' /* '#B963A5' */,
+			name: 'Fairu',
+			summary: 'A painless image-hosting server written in Kotlin with a React Frontend.',
+			home: "https://img.2d.gay/web",
+			color: '#FFB95E',
 			links: [
-				{ Icon: FaDiscord, href: 'https://mixtape.systems/discord' },
-				{ Icon: FaGithub, href: 'https://github.com/mixtape-bot' },
-				{ Icon: FaTwitter, href: 'https://twitter.com/MixtapeDiscord' },
-				{ Icon: FaGuilded, href: 'https://www.guilded.gg/i/Vkby6R72' },
-				{ Icon: FaCubes, href: 'http://mixtape.systems/our-stack' }
+				{ Icon: FaDiscord, href: '/discord' },
+				{ Icon: FaGithub, href: 'https://github.com/melike2d/fairu' }
 			],
-			technologies: ['kotlin', 'golang', 'rust', 'rabbitmq', 'microservices']
-		},
-		{
-			name: 'KeiryoJS',
-			summary: 'A fast distributed nodejs library for interacting with the discord gateway and api.',
-			home: 'https://github.com/KeiryoJS',
-			color: '#AE8CDE' /* '#795BA2' */,
-			links: [
-				{ Icon: FaDiscord, href: 'https://discord.gg/Vkbmb8kuH4' },
-				{ Icon: FaGithub, href: 'https://github.com/KeiryoJS' }
-			],
-			technologies: ['typescript', 'websockets']
+			technologies: ['kotlin', 'react', 'typescript']
 		},
 		{
 			name: 'lavaclient',
@@ -46,7 +61,7 @@ export default function Projects() {
 			home: 'https://lavaclient.js.org',
 			color: '#fff' /* "#795BA2" */,
 			links: [
-				{ Icon: FaDiscord, href: 'https://discord.gg/CH9ubGPMV6' },
+				{ Icon: FaDiscord, href: '/discord' },
 				{ Icon: FaGithub, href: 'https://github.com/lavaclient' }
 			],
 			technologies: ['typescript', 'websockets']

@@ -15,6 +15,7 @@ export default function Button({
 	children,
 	style = 'default',
 	className = '',
+	component: Component = "a",
 	link,
 	...props
 }: PropsWithChildren<ButtonProps>) {
@@ -25,12 +26,10 @@ export default function Button({
 		className,
 	);
 
-	return link ? (
-		<a className={classes} {...props}>
+	return (
+		<Component className={classes} {...props}>
 			{children}
-		</a>
-	) : (
-		<div className={classes}>{children}</div>
+		</Component>
 	);
 }
 
@@ -40,6 +39,7 @@ type ButtonProps = PropsWithClassName<
 		type?: ButtonType;
 		style?: ButtonStyle;
 		link?: boolean;
+		component?: any;
 	} & AllHTMLAttributes<{}>
 >;
 
